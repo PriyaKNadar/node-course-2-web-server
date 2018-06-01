@@ -58,13 +58,20 @@ app.get('/about',(req,res) => {
 });
 
 
-app.get('/home',(req,res) => {
+app.get('/',(req,res) => {
   //res.send('About Page');
   res.render('home.hbs',{
       pageTitle: 'Home Page',
       message: 'Welcome'
       // ,
       // currentYear: new Date().getFullYear()
+  });
+});
+
+app.get('/projects',(req,res) => {
+  res.render('projects.hbs',{
+    pageTitle: 'Projects page',
+    message: 'Project starts here'
   });
 });
 
